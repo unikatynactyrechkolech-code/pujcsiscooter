@@ -29,43 +29,49 @@
 
     /* Navigation */
     .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
+        position: fixed !important;
+        top: 70px !important;
+        left: 0 !important;
+        right: auto !important;
         width: auto;
         min-width: 200px;
-        height: auto;
-        background-color: var(--secondary-color);
+        height: auto !important;
+        max-height: none !important;
+        background-color: var(--secondary-color) !important;
         flex-direction: column;
         align-items: stretch;
         padding: var(--spacing-lg) var(--spacing-xl);
         gap: 0;
         box-shadow: 0 5px 30px var(--shadow-dark);
-        z-index: 999;
+        z-index: 9999 !important;
         border-radius: 0 0 var(--radius-lg) var(--radius-lg);
         transform: translateX(-110%);
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
         visibility: hidden;
         opacity: 0;
+        overflow: visible !important;
     }
 
     .nav-menu.active {
-        transform: translateX(0);
-        visibility: visible;
-        opacity: 1;
+        transform: translateX(0) !important;
+        visibility: visible !important;
+        opacity: 1 !important;
     }
 
     .nav-menu li {
         width: 100%;
+        display: block !important;
     }
 
     .nav-menu .nav-link {
-        display: block;
-        color: var(--white);
+        display: block !important;
+        color: var(--white) !important;
         font-size: var(--font-size-base);
         width: 100%;
         padding: var(--spacing-md) 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        opacity: 1 !important;
+        visibility: visible !important;
     }
 
     .nav-menu li:last-child .nav-link {
@@ -74,6 +80,7 @@
 
     .hamburger {
         display: flex;
+        z-index: 10000;
     }
 
     .nav-cta {
@@ -698,6 +705,12 @@
 
     .contact-preview-item {
         flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-preview-item div {
         text-align: center;
     }
 

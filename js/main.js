@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Start auto slide
-    if (testimonialCards.length > 0) {
+    // Start auto slide - disabled on mobile to prevent unwanted scrolling
+    if (testimonialCards.length > 0 && window.innerWidth > 768) {
         startAutoSlide();
     }
 
