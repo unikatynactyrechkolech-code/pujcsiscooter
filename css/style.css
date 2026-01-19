@@ -1526,7 +1526,7 @@ textarea {
 
 .hero-features {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: var(--spacing-xl);
     margin-top: var(--spacing-xl);
 }
@@ -2293,10 +2293,6 @@ textarea {
    FOOTER HOURS
    ============================================ */
 
-.footer-hours {
-    text-align: center;
-}
-
 .footer-hours h4 {
     font-size: var(--font-size-lg);
     margin-bottom: var(--spacing-lg);
@@ -2305,7 +2301,6 @@ textarea {
 .footer-hours p {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: var(--spacing-sm);
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: var(--spacing-sm);
